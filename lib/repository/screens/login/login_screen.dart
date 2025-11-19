@@ -1,4 +1,5 @@
 import 'package:chatapp_ui/domain/constants/app_colors.dart';
+import 'package:chatapp_ui/repository/screens/otp/otp_screen.dart';
 import 'package:chatapp_ui/repository/widgets/ui_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: IconButton(onPressed: (){
-        Navigator.pop(context);
-      }, icon: Icon(CupertinoIcons.back)),
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(CupertinoIcons.back),
+        ),
         backgroundColor: Theme.of(context).brightness == Brightness.dark
             ? AppColors.scaffoldDark
             : AppColors.scaffoldLight,
@@ -34,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
               fontFamily: "bold",
               color: AppColors.textLightMode,
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 10),
             UiHelper.customText(
               context: context,
               text: "Please confirm your country code and enter",
@@ -45,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
               text: "your phone number",
               fontSize: 14,
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
             UiHelper.customTextField(
               context: context,
               controller: phoneController,
@@ -55,7 +60,15 @@ class _LoginScreenState extends State<LoginScreen> {
           ],
         ),
       ),
-      floatingActionButton: UiHelper.customButton(text: "Continue", callback: (){}),
+      floatingActionButton: UiHelper.customButton(
+        text: "Continue",
+        callback: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => OtpScreen()),
+          );
+        },
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

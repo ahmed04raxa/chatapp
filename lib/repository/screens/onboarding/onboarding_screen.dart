@@ -28,7 +28,7 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //UiHelper.customImage(imgUrl: "onboardingLight.png"),
+            UiHelper.customImage(imgUrl: "onboardingLight.png"),
             SizedBox(height: 20),
             UiHelper.customText(
               context: context,
