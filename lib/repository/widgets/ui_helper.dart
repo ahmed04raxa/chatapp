@@ -36,7 +36,7 @@ class UiHelper {
   }) {
     return SizedBox(
       height: 52,
-      width: 327,
+      width: 350,
       child: ElevatedButton(
         onPressed: () {
           callback();
@@ -52,7 +52,8 @@ class UiHelper {
           style: TextStyle(
             fontSize: 16,
             color: Colors.white,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.bold,
+            fontFamily: "bold",
           ),
         ),
       ),
@@ -85,7 +86,7 @@ class UiHelper {
               color: Theme.of(context).brightness == Brightness.dark
                   ? AppColors.hintTextDarkMode
                   : AppColors.hintTextLightMode,
-              fontSize: 14
+              fontSize: 14,
             ),
             border: InputBorder.none,
           ),
