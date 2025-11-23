@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SizedBox(height: 10),
             UiHelper.customTextField(
               context: context,
-              controller: firstNameController,
+              controller: lastNameController,
               text: "Last Name (Optional)",
               textInputType: TextInputType.name,
               iconData: CupertinoIcons.person

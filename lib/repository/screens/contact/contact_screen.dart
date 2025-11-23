@@ -47,6 +47,8 @@ class _ContactScreenState extends State<ContactScreen> {
           context: context,
           text: "Contacts",
           fontSize: 18,
+          fontWeight: FontWeight.bold,
+          fontFamily: "bold",
         ),
         backgroundColor: Theme.of(context).brightness == Brightness.dark
             ? AppColors.scaffoldDark
