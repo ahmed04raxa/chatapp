@@ -15,28 +15,28 @@ class _ContactScreenState extends State<ContactScreen> {
     {
       "img": "Frame 3293.png",
       "name": "Athalia Putri",
-      "last seen": "Last seen yesterday",
+      "lastSeen": "Last seen yesterday",
     },
     {
       "img": "Frame 3293 (1).png",
       "name": "Erlan Sadewa",
-      "last seen": "Online",
+      "lastSeen": "Online",
     },
     {
       "img": "Frame 3293 (2).png",
       "name": "Midala Huera",
-      "last seen": "Last seen 3 hours ago",
+      "lastSeen": "Last seen 3 hours ago",
     },
     {
       "img": "Frame 3293 (3).png",
       "name": "Nafisa Gitari",
-      "last seen": "Online",
+      "lastSeen": "Online",
     },
-    {"img": "Frame 3293 (4).png", "name": "Raki Devon", "last seen": "Online"},
+    {"img": "Frame 3293 (4).png", "name": "Raki Devon", "lastSeen": "Online"},
     {
       "img": "Frame 3293 (5).png",
       "name": "Salsabila Akira",
-      "last seen": "Last seen 30 minutes ago",
+      "lastSeen": "Last seen 30 minutes ago",
     },
   ];
   @override
@@ -84,7 +84,7 @@ class _ContactScreenState extends State<ContactScreen> {
                         context: context,
                       ),
                       subtitle: UiHelper.customText(
-                        text: arrayContacts[index]['last seen'].toString(),
+                        text: arrayContacts[index]['lastSeen'].toString(),
                         fontSize: 12,
                         color: Color(0XFFADB5BD),
                         context: context,
